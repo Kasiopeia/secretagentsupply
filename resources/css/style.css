@@ -1,93 +1,217 @@
 body {
-	font-family: helvetica, sans-serif;
-	line-height: 1.4em;
-	background-color: black;
-	font-size: 18px;
+    font-family: helvetica, sans-serif;
+    line-height: 1.4em;
+    font-size: 18px;
 }
 
 .container {
-	max-width: 960px;
-	margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 /*Header section*/
 header {
-	background-color: black;
-	color: white;
+    background-color: black;
+    color: white;
 }
 
 header .container {
-	display: flex;
-	align-items: center;
-	height: 2.32rem;
+    display: flex;
+    align-items: center;
+    height: 2.32rem;
 }
 
 .logo {
-	height: 1.5rem;
-	margin: 0 1rem 0 0.5rem;
+    height: 1.5rem;
+    margin: 0 1rem 0 0.5rem;
 }
-
 
 /*Main section*/
 .banner {
-	background-image: url("../img/moto.jpeg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	height: 25em;
+    background-image: url("../img/moto.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 25em;
 }
 
 .headline {
-	width: 20rem;
-	background-color: black;
-	color: white;
-	top: 9rem;
-	padding: 2rem 3rem;
-	position: relative;
+    width: 20rem;
+    background-color: black;
+    color: white;
+    top: 9rem;
+    padding: 2rem 3rem;
+    position: relative;
 }
 
 h3 {
-	font-weight: bold;
-	font-size: 1rem;
-	text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 h1 {
-	font-size: 2rem;
-	font-weight: bold;
-	line-height: 1.2em;
-	margin: 0.25rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0.25rem 0;
 }
 
 /*Navigation*/
-nav  {
-	background-color: firebrick;
-	color: white;
+nav {
+    background-color: firebrick;
+    color: white;
 }
 
-
 nav ul {
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-	padding: 0.75rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
 }
 
 nav li {
-	display: inline-block;
+    display: inline-block;
+}
+
+.show-on-small {
+    display: none;
 }
 
 /*Product section*/
 .products {
-	background-color: white;
+    background-color: white;
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 30%;
+}
+
+.product-img {
+    height: 9rem;
+    padding: 2rem 0;
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+img {
+    max-width: 8em;
+    display: block;
+}
+
+.description {
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 /*Business Info*/
 .business-info {
-	background-color: white;
+    margin: 3rem 0 4rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 35%;
+}
+
+span {
+    display: block;
+}
+
+.title {
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
 }
 
 /*Footer Section*/
-footer .container {
-	color: white;
+footer {
+    color: white;
+    background-color: black;
 }
+
+footer .container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/*Style for Tablet*/
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .show-on-large {
+        display: none;
+    }
+
+    .show-on-small {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product {
+        width: 47%;
+    }
+
+    .classes {
+        display: none;
+    }
+}
+
+/*Style for Phone*/
+@media only screen and (max-width: 470px) {
+	.banner {
+		height: 15rem;
+	}
+
+	.headline {
+		width: 100%;
+		top: 10rem;
+		padding: 1rem 2rem;
+	}
+
+	h3 {
+		font-size: 0.77rem;
+	}
+
+	h1 {
+		font-size: 1rem;
+	}
+
+	.products {
+		justify-content: center;
+	}
+
+	.product {
+		width: 90%;
+	}
+
+	.watch {
+		display: none;
+	}
+
+	.business-info {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.info {
+		width: 90%;
+		margin-bottom: 0.5rem;
+	}
+
+	footer {
+		text-align: center;
+	}
+}
+
